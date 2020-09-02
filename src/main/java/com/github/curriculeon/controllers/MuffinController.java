@@ -11,7 +11,7 @@ import org.springframework.stereotype.Controller;
 public class MuffinController {
     private MuffinService service;
 
-    @Autowired
+    @Autowired  // you autowire to the repository
     public MuffinController(MuffinService service) {
         this.service = service;
     }
