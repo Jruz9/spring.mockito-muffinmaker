@@ -2,10 +2,14 @@ package com.github.curriculeon.services;
 
 import com.github.curriculeon.repositories.BakerRepository;
 import com.github.curriculeon.models.Baker;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class BakerService {
     private BakerRepository repository;
 
+    @Autowired  //injects bean by type can be used alone.
     public BakerService(BakerRepository repository) {
         this.repository = repository;
     }

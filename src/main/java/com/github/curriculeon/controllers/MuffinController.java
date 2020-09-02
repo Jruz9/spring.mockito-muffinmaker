@@ -2,12 +2,16 @@ package com.github.curriculeon.controllers;
 
 import com.github.curriculeon.models.Muffin;
 import com.github.curriculeon.services.MuffinService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class MuffinController {
     private MuffinService service;
 
+    @Autowired
     public MuffinController(MuffinService service) {
         this.service = service;
     }
